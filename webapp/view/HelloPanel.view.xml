@@ -1,0 +1,14 @@
+<mvc:View controllerName="moizaled.SAPUI5.controller.HelloPanel" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Panel headerText="{i18n>helloPanelTitle}" width="auto" class="sapUiResponsiveMargin" expandable="{device>/system/phone}"
+		expanded="{ !${device>/system/phone} }" accessibleRole="Region">
+		<content>
+			<Button id="HelloDialogButton" icon="sap-icon://world" text="{i18n>OpenDialogButtonText}" press=".onOpenDialog"
+				class="sapUiSmallMarginend sapUiVisibleOnlyOnDesktop"/>
+			<Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginend sapUiHideOnDesktop"/>
+			<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
+			<Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText sapThemingLight-asColor"></Text>
+		</content>
+	</Panel>
+	<core:Fragment fragmentName="moizaled.SAPUI5.view.Form01" type="XML"/>
+	<!--</core>-->
+</mvc:View>

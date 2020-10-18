@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="moizaled.SAPUI5.controller.Detail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:lp="moizaled.SAPUI5.control">
+	<Page title="Detalle de facturas" showNavButton="true" navButtonPress=".onNavBack">
+		<ObjectHeader intro="{invoice>ShipperName}" title="{invoice>ProductName}"
+			number="{ parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}] , type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
+			numberUnit="{view>/currency}" responsive="true" fullScreenOptimized="true">
+			<attributes>
+				<ObjectAttribute title="{i18n>quantituTitle}" text="{invoice>Quantity}"></ObjectAttribute>
+			</attributes>
+		</ObjectHeader>
+		<lp:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+	</Page>
+</mvc:View>

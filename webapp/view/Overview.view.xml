@@ -1,0 +1,25 @@
+<mvc:View controllerName="moizaled.SAPUI5.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:core="sap.ui.core">
+	<Page title="{i18n>homePageTitle}">
+		<landmarkInfo>
+			<PageAccessibleLandmarkInfo rootRole="Region" rootLabel="{i18n>Overview_rootLabel}" contentRole="Main" headerRole="Banner"
+				headerLabel="{i18n>Overview_headerLabel}" contentLabel="{i18n>Overview_contentLabel}"/>
+		</landmarkInfo>
+		<headerContent>
+			<Button id="HelloDialogHeader" icon="sap-icon://world" press=".onOpenHeader" class="sapUiSmallMarginend"/>
+		</headerContent>
+		<content>
+			<mvc:XMLView viewName="moizaled.SAPUI5.view.HelloPanel"/>
+			<mvc:XMLView viewName="moizaled.SAPUI5.view.invoiceList"/>
+			<!--</mvc:XMLView>-->
+			<!--						<Panel headerText="{i18n>helloPanelTitle}" width="auto" class="sapUiResponsiveMargin">
+							<content>
+								<Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginend"/>
+								<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
+								<Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText sapThemingLight-asColor"></Text>
+							</content>
+						</Panel>-->
+			<!--<core:Fragment fragmentName="moizaled.SAPUI5.view.Form01" type="XML"/>-->
+		</content>
+	</Page>
+</mvc:View>
